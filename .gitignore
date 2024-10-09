@@ -1,0 +1,21 @@
+# .gitignore
+
+# Ignore bundler config and Gemfile.lock (if you don't want Gemfile.lock to be included)
+/.bundle
+Gemfile.lock
+
+# Ignore compiled files
+*.rbc
+*.gem
+
+# Ignore cache, logs, temp files
+/log/*
+!/log/.keep
+/tmp
+/.byebug_history
+
+# Ignore spec temp files
+/spec/reports
+
+# Ignore code coverage
+/coverage/
