@@ -1,10 +1,9 @@
 module DataTypes
-  class Node
-    attr_accessor :value, :next
+  class NodeBase
+    attr_accessor :value
 
     def initialize(value)
       @value = value
-      @next = nil
     end
   end
 end
