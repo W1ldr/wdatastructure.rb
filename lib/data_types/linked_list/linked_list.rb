@@ -1,5 +1,4 @@
-# lib/data_types/linked_list.rb
-require_relative "node"
+require_relative "linked_node"
 
 module DataTypes
   class LinkedList
@@ -12,7 +11,7 @@ module DataTypes
 
     # Append to the end of the list
     def append(value)
-      new_node = Node.new(value)
+      new_node = SinglyLinkedNode.new(value)
 
       if @head.nil?
         @head = new_node
@@ -25,7 +24,7 @@ module DataTypes
 
     # Insert a new element at the beginning
     def prepend(value)
-      new_node = Node.new(value)
+      new_node = SinglyLinkedNode.new(value)
       if @head.nil?
         @head = new_node
         @tail = new_node
