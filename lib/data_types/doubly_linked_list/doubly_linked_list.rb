@@ -22,5 +22,14 @@ module DataTypes
       end
     end
 
+    def find(value)
+      current = @head
+      while current
+        return current if current.value == value
+        current = current.next
+      end
+      nil
+    end
+
   end
 end
