@@ -1,4 +1,3 @@
-# ruby
 require_relative '../lib/data_types/stack/stack'
 
 RSpec.describe DataTypes::Stack do
