@@ -1,4 +1,3 @@
-# ruby
 module DataTypes
   class Queue
     include Enumerable

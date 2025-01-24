@@ -1,4 +1,3 @@
-# ruby
 require_relative '../lib/data_types/queue/queue'
 
 RSpec.describe DataTypes::Queue do
