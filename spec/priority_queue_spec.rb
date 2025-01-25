@@ -12,9 +12,15 @@ RSpec.describe DataTypes::PriorityQueue do
       expect(pq.to_a).to eq(["high", "medium", "low"])
     end
 
-    it 'enqueues an element into an empty queue' do
-      pq.enqueue("only", 100)
+    it 'enqueues an element into an empty queue with default priority' do
+      pq.enqueue("only")
       expect(pq.to_a).to eq(["only"])
+      # Default priority 100 should be applied if not specified.
+      expect(pq.peek).to eq("only")
+    end
+
+    it 'raises an error when a non-numeric priority is passed' do
+      expect { pq.enqueue("bad", "high") }.to raise_error(ArgumentError, "Priority must be a numeric value")
     end
   end
 
