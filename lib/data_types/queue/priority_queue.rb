@@ -8,7 +8,13 @@ module DataTypes
 
     # Enqueues an element with an associated priority.
     # Lower priority values indicate higher priority.
-    def enqueue(value, priority)
+    # If no priority is provided, a default value (100) is used.
+    # Raises an error if the provided priority is not Numeric.
+    def enqueue(value, priority = 100)
+      unless priority.is_a?(Numeric)
+        raise ArgumentError, "Priority must be a numeric value"
+      end
+
       @data << { value: value, priority: priority }
       @data.sort_by! { |item| item[:priority] }
     end
