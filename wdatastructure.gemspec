@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name                       = "wdatastructure"
-  s.version                    = "0.0.2"
+  s.version                    = "0.0.3"
   s.summary                    = "datastructure collection"
   s.description                = "A collection datastructure implementation"
   s.author                     = "Wilder 'W1ldr' Ribeiro"
